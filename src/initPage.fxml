@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.281" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InitPage">
+   <children>
+      <TableView fx:id="table" layoutX="232.0" prefHeight="569.0" prefWidth="568.0">
+        <columns>
+          <TableColumn fx:id="tableName" prefWidth="152.0" text="Name" />
+          <TableColumn fx:id="tableRadius" prefWidth="68.0" text="Radius" />
+            <TableColumn fx:id="tableMass" prefWidth="74.0" text="Mass" />
+            <TableColumn fx:id="tableVx" prefWidth="69.0" text="Initial Vx" />
+            <TableColumn fx:id="tableVy" prefWidth="69.0" text="Initial Vy" />
+            <TableColumn fx:id="tableRx" prefWidth="67.0" text="Initial rx" />
+            <TableColumn fx:id="tableRy" prefWidth="68.0" text="Initial ry" />
+        </columns>
+      </TableView>
+      <Button layoutX="143.0" layoutY="483.0" mnemonicParsing="false" onAction="#goToSimulationPage" text="Simulate" />
+      <Button layoutX="151.0" layoutY="243.0" mnemonicParsing="false" onAction="#addBall" text="Add" />
+      <Button layoutX="14.0" layoutY="551.0" mnemonicParsing="false" onAction="#exit" text="Exit" />
+      <Button fx:id="windSettingButton" layoutX="137.0" layoutY="551.0" mnemonicParsing="false" onAction="#goToWindSettingPage" text="Wind Setting" />
+      <Label layoutX="18.0" layoutY="22.0" text="Ball Name" />
+      <Label layoutX="27.0" layoutY="51.0" text="Radius" />
+      <Label layoutX="31.0" layoutY="80.0" text="Mass" />
+      <Label layoutX="39.0" layoutY="110.0" text="Vx" />
+      <Label layoutX="39.0" layoutY="143.0" text="Vy" />
+      <Label layoutX="41.0" layoutY="208.0" text="ry" />
+      <Label layoutX="41.0" layoutY="177.0" text="rx" />
+      <TextField fx:id="addName" layoutX="86.0" layoutY="18.0" prefHeight="25.0" prefWidth="103.0" />
+      <TextField fx:id="addRadius" layoutX="86.0" layoutY="47.0" prefHeight="25.0" prefWidth="103.0" />
+      <TextField fx:id="addMass" layoutX="86.0" layoutY="76.0" prefHeight="25.0" prefWidth="103.0" />
+      <TextField fx:id="addVx" layoutX="86.0" layoutY="106.0" prefHeight="25.0" prefWidth="103.0" />
+      <TextField fx:id="addVy" layoutX="86.0" layoutY="139.0" prefHeight="25.0" prefWidth="103.0" />
+      <TextField fx:id="addRx" layoutX="86.0" layoutY="173.0" prefHeight="25.0" prefWidth="103.0" />
+      <TextField fx:id="addRy" layoutX="86.0" layoutY="204.0" prefHeight="25.0" prefWidth="103.0" />
+      <Label layoutX="16.0" layoutY="446.0" text="Simulation Time" />
+      <Label layoutX="19.0" layoutY="487.0" text="dt" />
+      <TextField fx:id="simTime" layoutX="112.0" layoutY="442.0" prefHeight="25.0" prefWidth="62.0" />
+      <TextField fx:id="dt" layoutX="47.0" layoutY="483.0" prefHeight="25.0" prefWidth="62.0" />
+      <Label layoutX="27.0" layoutY="297.0" text="Ball Name" />
+      <TextField fx:id="removeName" layoutX="95.0" layoutY="293.0" prefHeight="25.0" prefWidth="103.0" />
+      <Button layoutX="140.0" layoutY="325.0" mnemonicParsing="false" onAction="#removeBall" text="Remove" />
+      <Label fx:id="label" layoutX="231.0" layoutY="568.0" prefHeight="32.0" prefWidth="568.0" textFill="BLUE" />
+      <Label layoutX="18.0" layoutY="405.0" text="Width" />
+      <TextField fx:id="width" layoutX="62.0" layoutY="401.0" prefHeight="25.0" prefWidth="38.0" />
+      <Label layoutX="119.0" layoutY="405.0" text="Height" />
+      <TextField fx:id="height" layoutX="163.0" layoutY="401.0" prefHeight="25.0" prefWidth="38.0" />
+      <Button layoutX="151.0" layoutY="243.0" mnemonicParsing="false" onAction="#addBall" text="Add" />
+      <CheckBox fx:id="hasAir" layoutX="187.0" layoutY="527.0" mnemonicParsing="false" onAction="#airOptionSet" text="Air" />
+   </children>
+</AnchorPane>
